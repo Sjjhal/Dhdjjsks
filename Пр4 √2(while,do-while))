@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class SentenceCountWhile {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введіть текст: ");
+        String text = scanner.nextLine();
+        int count = 0;
+        int i = 0;
+
+        while (i < text.length()) {
+            char ch = text.charAt(i);
+            if (ch == '.' || ch == '!' || ch == '?') {
+                count++;
+            }
+            i++;
+        }
+
+        System.out.println("Кількість речень: " + count);
+        scanner.close();
+    }
+}
+import java.util.Scanner;
+
+public class SentenceCountDoWhile {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введіть текст: ");
+        String text = scanner.nextLine();
+        int count = 0;
+        int i = 0;
+
+        do {
+            char ch = text.charAt(i);
+            if (ch == '.' || ch == '!' || ch == '?') {
+                count++;
+            }
+            i++;
+        } while (i < text.length());
+
+        System.out.println("Кількість речень: " + count);
+        scanner.close();
+    }
+}
